@@ -11,15 +11,16 @@
 	<context:component-scan base-package="com.koabs.spring.*">
 		<!-- 防止SpringMVC和SpringIOC对同一个对象的管理重合 存疑 <context:exclude-filter type="annotation" 
 			expression="org.springframework.stereotype.Controller"/> <context:exclude-filter 
-			type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/> -->
+			type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/> 
+		-->
 	</context:component-scan>
 	<context:annotation-config />
-
-	<!-- don't handle the static resource <mvc:default-servlet-handler / > -->
-	<mvc:view-controller path="/" />
-
+	
 	<!-- if you use annotation you must configure following setting -->
 	<mvc:annotation-driven />
+	
+	<!-- don't handle the static resource <mvc:default-servlet-handler / > -->
+	<mvc:view-controller path="/" />
 
 	<!-- configure the InternalResourceViewResolver -->
 	<bean

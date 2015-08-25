@@ -60,7 +60,26 @@
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.12</version>
 		</dependency>
-
+		<!--Mybatis 通用DAO-->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+       
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.3.0</version>   
+        </dependency>
+        
+         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.29</version>
+            <scope>test</scope>
+        </dependency>
+        
 	</dependencies>
 
 </project>

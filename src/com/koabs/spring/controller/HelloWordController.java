@@ -16,12 +16,12 @@ import com.koabs.spring.util.Log;
 @Controller
 @RequestMapping("mvc")
 public class HelloWordController{
-	@RequestMapping("/hello.do")
+	@RequestMapping("/hello")
 	public String hello(){
 		return "hello";
 	}
 	
-	@RequestMapping("/helloParam.do")
+	@RequestMapping("/helloParam")
 	@ResponseBody
 	public String helloParam(String name, String age){
 		Log.debug("name", name);
@@ -29,7 +29,7 @@ public class HelloWordController{
 		return "helloParam";
 	}
 	
-	@RequestMapping("/person.do")
+	@RequestMapping("/person")
 	@ResponseBody
 	public String person(Person person) {
 		Log.debug("person.name", person.getName());
@@ -37,7 +37,7 @@ public class HelloWordController{
 		return "person";
 	}
 	
-	@RequestMapping("/date.do")
+	@RequestMapping("/date")
 	public String date(Date date) {
 		Log.debug("Date", date);
 		return "date";
