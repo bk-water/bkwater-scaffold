@@ -4,17 +4,12 @@
 	<groupId>KoabsScaffold</groupId>
 	<artifactId>KoabsScaffold</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<modules>
+		<module>koabs-web</module>
+		<module>koabs-core</module>
+	</modules>
+	<packaging>pom</packaging>
 	<build>
-		<sourceDirectory>src, core</sourceDirectory>
-		<resources>
-			<resource>
-				<directory>resource</directory>
-				<excludes>
-					<exclude>**/*.java</exclude>
-				</excludes>
-			</resource>
-		</resources>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
