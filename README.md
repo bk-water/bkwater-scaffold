@@ -1,5 +1,5 @@
 # KoabsScaffold
-KoabsScaffold 是一个企业级的JAVAEE快速开发框架提供了了基本的权限和流程控制功能
+KoabsScaffold 基于Spring Boot 构建
 
 ### 核心功能:
 
