@@ -1,10 +1,9 @@
 package com.koabs.web.entity;
 
-import java.util.Date;
-
+import com.koabs.entity.BaseEntity;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import com.koabs.entity.BaseEntity;
+import java.util.Date;
 
 public class User extends BaseEntity{
 

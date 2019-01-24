@@ -1,5 +1,5 @@
 # KoabsScaffold
-KoabsScaffold 基于Spring Boot 构建
+KoabsScaffold 基于Spring Boot2.x 构建
 
 ### 核心功能:
 
@@ -21,6 +21,9 @@ KoabsScaffold 基于Spring Boot 构建
 7. Servlet3.0
 8. websocket
 9. Mysql
+
+### spring boot2.x 自动生成页面
+https://start.spring.io/
 
 
 ### 备注：

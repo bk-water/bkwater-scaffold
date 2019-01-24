@@ -1,9 +1,5 @@
 package com.koabs.common.exception;
 
-import org.springframework.util.StringUtils;
-
-import com.koabs.common.util.MessageIl8nUtils;
-
 /**
  * 
  * @author kevin1
@@ -61,8 +57,8 @@ public class BaseException extends RuntimeException {
     @Override
     public String getMessage() {
         String message = null;
-        if (!StringUtils.isEmpty(code)) {
-            message = MessageIl8nUtils.message(code, args);
+        if (true) {
+//            message = MessageIl8nUtils.message(code, args);
         }
         if (message == null) {
             message = defaultMessage;
