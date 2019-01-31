@@ -8,68 +8,70 @@
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
         </encoder>
     </appender>
-    <!-- 出错日志 appender  -->
-    <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- 按天回滚 daily -->
-            <!-- log.dir 在maven profile里配置 -->
-            <fileNamePattern>${log.dir}/es-error-%d{yyyy-MM-dd}.log</fileNamePattern>
-            <!-- 日志最大的历史 60天 -->
-            <maxHistory>60</maxHistory>
-        </rollingPolicy>
-        <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
-        </encoder>
-    </appender>
-    <!-- 访问日志 appender  -->
-    <appender name="ACCESS" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- 按天回滚 daily -->
-            <fileNamePattern>${log.dir}/es-access-%d{yyyy-MM-dd}.log</fileNamePattern>
-            <!-- 日志最大的历史 60天 -->
-            <maxHistory>60</maxHistory>
-        </rollingPolicy>
-        <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
-        </encoder>
-    </appender>
+    <!--&lt;!&ndash; 出错日志 appender  &ndash;&gt;-->
+    <!--<appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+            <!--&lt;!&ndash; 按天回滚 daily &ndash;&gt;-->
+            <!--&lt;!&ndash; log.dir 在maven profile里配置 &ndash;&gt;-->
+            <!--<fileNamePattern>${log.dir}/es-error-%d{yyyy-MM-dd}.log</fileNamePattern>-->
+            <!--&lt;!&ndash; 日志最大的历史 60天 &ndash;&gt;-->
+            <!--<maxHistory>60</maxHistory>-->
+        <!--</rollingPolicy>-->
+        <!--<encoder>-->
+            <!--<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>-->
+        <!--</encoder>-->
+    <!--</appender>-->
+    <!--&lt;!&ndash; 访问日志 appender  &ndash;&gt;-->
+    <!--<appender name="ACCESS" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+            <!--&lt;!&ndash; 按天回滚 daily &ndash;&gt;-->
+            <!--<fileNamePattern>${log.dir}/es-access-%d{yyyy-MM-dd}.log</fileNamePattern>-->
+            <!--&lt;!&ndash; 日志最大的历史 60天 &ndash;&gt;-->
+            <!--<maxHistory>60</maxHistory>-->
+        <!--</rollingPolicy>-->
+        <!--<encoder>-->
+            <!--<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>-->
+        <!--</encoder>-->
+    <!--</appender>-->
 
-    <!-- 访问日志 appender  -->
-    <appender name="SYS-USER" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- 按天回滚 daily -->
-            <fileNamePattern>${log.dir}/es-sys-user-%d{yyyy-MM-dd}.log</fileNamePattern>
-            <!-- 日志最大的历史 60天 -->
-            <maxHistory>60</maxHistory>
-        </rollingPolicy>
-        <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
-        </encoder>
-    </appender>
+    <!--&lt;!&ndash; 访问日志 appender  &ndash;&gt;-->
+    <!--<appender name="SYS-USER" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+            <!--&lt;!&ndash; 按天回滚 daily &ndash;&gt;-->
+            <!--<fileNamePattern>${log.dir}/es-sys-user-%d{yyyy-MM-dd}.log</fileNamePattern>-->
+            <!--&lt;!&ndash; 日志最大的历史 60天 &ndash;&gt;-->
+            <!--<maxHistory>60</maxHistory>-->
+        <!--</rollingPolicy>-->
+        <!--<encoder>-->
+            <!--<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>-->
+        <!--</encoder>-->
+    <!--</appender>-->
 
-    <root level="info"/>
+    <root level="debug">
+        <appender-ref ref="STDOUT"/>
+    </root>
 
     <!--<logger name="org.apache" level="debug">-->
         <!--<appender-ref ref="STDOUT"/>-->
     <!--</logger>-->
 
-    <!--错误日志-->
-    <logger name="es-error" level="info">
-        <appender-ref ref="ERROR"/>
-    </logger>
-    <!--访问日志-->
-    <logger name="es-access" level="info">
-        <appender-ref ref="ACCESS"/>
-    </logger>
-    <!--系统用户操作日志-->
-    <logger name="es-sys-user" level="info">
-        <appender-ref ref="SYS-USER"/>
-    </logger>
+    <!--&lt;!&ndash;错误日志&ndash;&gt;-->
+    <!--<logger name="es-error" level="info">-->
+        <!--<appender-ref ref="ERROR"/>-->
+    <!--</logger>-->
+    <!--&lt;!&ndash;访问日志&ndash;&gt;-->
+    <!--<logger name="es-access" level="info">-->
+        <!--<appender-ref ref="ACCESS"/>-->
+    <!--</logger>-->
+    <!--&lt;!&ndash;系统用户操作日志&ndash;&gt;-->
+    <!--<logger name="es-sys-user" level="info">-->
+        <!--<appender-ref ref="SYS-USER"/>-->
+    <!--</logger>-->
 
-    <!-- cache -->
-    <logger name="com.sishuok.es.extra.aop" level="info">
-            <appender-ref ref="STDOUT"/>
-    </logger>
+    <!--&lt;!&ndash; cache &ndash;&gt;-->
+    <!--<logger name="com.sishuok.es.extra.aop" level="info">-->
+            <!--<appender-ref ref="STDOUT"/>-->
+    <!--</logger>-->
 
 </configuration>
 
