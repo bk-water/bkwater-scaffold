@@ -22,9 +22,5 @@ KoabsScaffold 基于Spring Boot2.x 构建
 9. Mysql
 
 
-### 备注：
-本项目暂时只支持Mysql数据库, 需要支持websocket 的容器(如Tomcat8)
-
-
 关于我：
 白开水 koabs@foxmail.com.
