@@ -1,5 +1,5 @@
-# KoabsScaffold
-KoabsScaffold 基于Spring Boot2.x 构建
+# BkWaterScaffold
+BkWaterScaffold 基于Spring Boot2.x 构建
 
 ### 核心功能:
 
@@ -25,6 +25,3 @@ KoabsScaffold 基于Spring Boot2.x 构建
 ### 备注：
 本项目暂时只支持Mysql数据库, 需要支持websocket 的容器(如Tomcat8)
 
-
-关于我：
-白开水 koabs@foxmail.com.

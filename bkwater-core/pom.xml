@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>koabs.scaffold</groupId>
+	<groupId>com.bkwater.scaffold</groupId>
 	<version>1.0-SNAPSHOT</version>
-	<artifactId>koabs-core</artifactId>
+	<artifactId>bkwater-core</artifactId>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -12,7 +12,7 @@
 	</properties>
 
 	<build>
-		<finalName>koabs-core</finalName>
+		<finalName>bkwater-core</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
